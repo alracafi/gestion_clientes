@@ -88,7 +88,6 @@
 <div class="card">
     <div class="card-body">
         @include('tables.tabla')
-
     </div>
 </div>
 {{------Script que se activa cuando se crea,elimina o actualiza un cliente desde el controlador-y muestra el mensaje
