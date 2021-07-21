@@ -19,15 +19,15 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-    {{---------------------boton añadir solo disponible cuando haya localidad y zona en la BD --}}
-    
+                    {{---------------------boton añadir solo disponible cuando haya localidad y zona en la BD --}}
+
                     <li class="nav-item">
                         @if ($localidad->count()>0 and $zona->count()>0)
                         <a class="form-control me-2 border border-danger bg-green-400"
                             href="{{ route('clientes.create') }}">{{__('buttons.add_client')}}</a>
                         @else
-                        <button
-                            class="form-control me-2 border border-danger bg-green-400" disabled>{{__('buttons.add_client')}}</button>
+                        <button id="btn_add" class="form-control me-2 border border-danger bg-green-400"
+                            >{{__('buttons.add_client')}}</button>
                         @endif
 
                     </li>
@@ -174,6 +174,10 @@
                });
            })
 
+           
+  $("#btn_add").on("click",function(e){
+    Swal.fire('Debe introducir al menos una localidad y una zona.')
+           })
  
 </script>
 
