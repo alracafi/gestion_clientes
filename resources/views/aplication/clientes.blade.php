@@ -19,10 +19,17 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-
+    {{---------------------boton añadir solo disponible cuando haya localidad y zona en la BD --}}
+    
                     <li class="nav-item">
+                        @if ($localidad->count()>0 and $zona->count()>0)
                         <a class="form-control me-2 border border-danger bg-green-400"
                             href="{{ route('clientes.create') }}">{{__('buttons.add_client')}}</a>
+                        @else
+                        <button
+                            class="form-control me-2 border border-danger bg-green-400" disabled>{{__('buttons.add_client')}}</button>
+                        @endif
+
                     </li>
                     <li class="nav-item">
                         <a class="form-control me-2 border border-danger"
@@ -70,7 +77,7 @@
         </div>
     </nav>
     {{-- -------------------------------------------------------fin nav--------------------------- --}}
-    
+
     <div class="col-md-2">
         @include('forms.paginaform')
     </div>
@@ -112,7 +119,7 @@
 @case('actualizar')
 
 <script>
-        Swal.fire({
+    Swal.fire({
         title: "{{__('labels.updated')}}",
         timer: 1500,
         showConfirmButton:false,
