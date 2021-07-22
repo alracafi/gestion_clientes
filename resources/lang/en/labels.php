@@ -56,4 +56,5 @@ return [
    'results'=>'Results per page',  //resultados por pagina
    'all'=>'All',                         //todo
    'order'=>'Order by  ',
+   'debe'=>'You must enter at least one town and one zone',
 ];

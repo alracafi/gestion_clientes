@@ -9,6 +9,7 @@
    <link href="{{ asset('boostrap/bootstrap.min.css') }}" rel="stylesheet">
    <link rel="stylesheet" href="{{asset('css/app.css')}}">
    <link rel="stylesheet" href="{{ asset('sweetalert2/sweetalert2.min.css') }}">
+   
    {{--------------------------------JS------------------------------------------------------------}}
 
    <script src="{{asset('jquery/jquery-3.6.0.min.js')}}"></script>

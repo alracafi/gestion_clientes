@@ -42,7 +42,7 @@ class ClientesController extends Controller
         $frequencia = $request->get('frequencia');
         $ordenar = $request->get('order');
         $paginador = $request->get('paginador');
-        $modo="";
+       
 
         if ($zona_form || $forma || $tipo || $frequencia || $dia || $localidad_form) {
             $modo_filtrado = true;
@@ -58,7 +58,7 @@ class ClientesController extends Controller
             $cliente_sin_paginar->toArray();
         }
         $num = Clientes::count();    //guarda el numero de clientes          
-        return view('aplication.clientes', compact('cliente', 'zona', 'localidad', 'modo_filtrado', 'data', 'num', 'cliente_sin_paginar', 'ordenar','request'));
+        return view('aplication.clientes', compact('cliente', 'zona', 'localidad', 'modo_filtrado', 'data', 'num', 'cliente_sin_paginar', 'ordenar'));
     }
 
     /**

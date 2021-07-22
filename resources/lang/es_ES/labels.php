@@ -56,4 +56,5 @@ return [
    'results'=>'Resultados por pagina',  //resultados por pagina
    'all'=>'Todo',                         //todo
    'order'=>'Ordenar por    ',
+   'debe'=>'Debe introducir al menos una localidad y una zona',
 ];

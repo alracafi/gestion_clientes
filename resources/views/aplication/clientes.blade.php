@@ -32,7 +32,7 @@
 
                     </li>
                     <li class="nav-item">
-                        <a class="form-control me-2 border border-danger"
+                        <a class="form-control me-2 border border-danger bg-gray-300"
                             href="{{route('localidades.index')}}">{{__('buttons.config')}}</a>
                     </li>
                     <li class="nav-item">
@@ -176,7 +176,7 @@
 
            
   $("#btn_add").on("click",function(e){
-    Swal.fire('Debe introducir al menos una localidad y una zona.')
+    Swal.fire("{{__('labels.debe')}}")
            })
  
 </script>
