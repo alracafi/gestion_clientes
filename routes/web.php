@@ -20,17 +20,21 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-Route::get('/',[ClientesController::class,'index'])->middleware('auth');
+Route::get('/', [ClientesController::class, 'index'])->middleware('auth');
 
-Route::resource('localidades',LocalidadesController::class);
+Route::resource('localidades', LocalidadesController::class);
 
-Route::resource('clientes',ClientesController::class);
+Route::resource('clientes', ClientesController::class);
 
-Route::resource('zonas',ZonasController::class);
+Route::resource('zonas', ZonasController::class);
 
 
 //---------------------ruta de la pagina pdf-----------------
 
-Route::get('/pdf/{cliente}',[ClientesController::class,'crearPDF'])->name('pdf');
+Route::get('/pdf/{cliente}', [ClientesController::class, 'crearPDF'])->name('pdf');
 
 require __DIR__.'/auth.php';
+
+
+//-----------------rutas de auth----------------------------------------------//
+
